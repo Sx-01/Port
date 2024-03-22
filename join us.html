@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Join Us</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .column {
+            flex: 1;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        .hr{
+            margin-top: 15px;
+            border: none;
+           outline: none;
+          height: 45px;
+          width: 180px;
+          border-radius: 20px;
+         color: white;
+         background-color: red;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <h1>Join Us</h1>
+            <p>We are always looking for talented and motivated individuals to join our team. If you are passionate about creating high-quality software solutions and want to work with a team of experts, we would love to hear from you.</p>
+            <h2>Current Openings</h2>
+            <ul>
+                <li>Web Developer</li>
+                <li>Mobile Developer</li>
+                <li>Software Engineer</li>
+                <li>Project Manager</li>
+            </ul>
+            <form id="joinForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+
+                <label for="position">Position:</label>
+                <input type="text" id="position" name="position"><br><br>
+
+                <label for="message">Message:</label><br><br>
+                <textarea id="message" name="message"></textarea><br><br>
+
+                <button class="hr">JOIN US</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("joinForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var position = document.getElementById("position").value;
+            var message = document.getElementById("message").value;
+            // Send the form data to a server-side script for processing
+            console.log("Name: " + name);
+            console.log("Email: " + email);
+            console.log("Position: " + position);
+            console.log("Message: " + message);
+        });
+    </script>
+</body>
+</html>

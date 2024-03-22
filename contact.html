@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .column {
+            flex: 1;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 20%;
+            padding: 10px;
+            text-align: justify;
+            font-size: 18px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+         .submit{
+            width: 20%;
+            padding: 10px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            margin-top: 30px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="container">
+            <div class="column">
+                <h1>Contact Us</h1>
+                <form id="contactForm">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+    
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"></textarea><br>
+    
+                    <button class="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </center>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+            // Send the form data to a server-side script for processing
+            console.log("Name: " + name);
+            console.log("Email: " + email);
+            console.log("Message: " + message);
+        });
+    </script>
+</body>
+</html>
